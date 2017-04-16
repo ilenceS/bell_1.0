@@ -9,7 +9,6 @@ import java.util.*;
  * Created by nietz on 17-4-11.
  */
 public class bell_view extends JFrame{
-    bell_control bc=new bell_control();
     bell_control.ClockJTap cj=new bell_control.ClockJTap();
     bell_control.AlarmJTap ac=new bell_control.AlarmJTap();
     JTabbedPane jtp=new JTabbedPane();

@@ -17,7 +17,7 @@ public class bell_control {
     public static void drawBell(JPanel a, int x, int y){
         JpanelDao.DrawBell db=new JpanelDao.DrawBell();
         a.add(db);
-        db.setBounds(x,y,220,250);      //画图的钟的大小；
+        db.setBounds(x,y,220,240);
     }
     public static JpanelDao.SetGetTimes setGetTimes(JPanel a, int x, int y){
         JpanelDao.SetGetTimes js=new JpanelDao.SetGetTimes();
@@ -34,23 +34,22 @@ public class bell_control {
 
     public static class ClockJTap extends  JPanel{
         public JpanelDao.SetGetTimes sg=null;
-        private JLabel clockJlabel=new JLabel("时钟");
         private JLabel setJlabel=new JLabel("设置时间");
+        private JLabel clockJlabel=new JLabel("时钟");
         public ClockJTap(){
             setLayout(null);
             add(clockJlabel);
-            clockJlabel.setBounds(95,220,50,40);
+            clockJlabel.setBounds(95,230,40,40);
             drawBell(this,0,0);
             add(setJlabel);
-            setJlabel.setBounds(240,130,60,40);
-            sg=setGetTimes(this,300,138);
+            setJlabel.setBounds(240,120,60,40);
+            sg=setGetTimes(this,300,130);
         }
         public void setGetTimesRun(JpanelDao.SetGetTimes a){
             int ss;
             int mm;
             int HH;
             ss = getRt().getss();
-            System.out.println(getRt().getmm());
             if(ss==0){
                 mm=getRt().getmm();
                 if(mm<10){
